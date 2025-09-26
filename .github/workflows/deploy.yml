@@ -3,7 +3,7 @@ name: CI/CD - Build and Deploy Docker Frontend
 on:
   push:
     branches:
-      - master
+      - master  # ou main si c'est ta branche principale
 
 jobs:
   build:
@@ -11,30 +11,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Récupération du code
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2. Setup Docker Buildx
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Login to Docker (optionnel si registry privée)
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-
+      # 3. Build l'image Docker localement sur le runner
       - name: Build Docker image
         run: |
           docker build -t my-portfolio:latest .
 
-      - name: Save Docker image as artifact (optionnel)
+      # 4. Optionnel : sauvegarder le Dockerfile (ou l'image si besoin)
+      - name: Save Dockerfile as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: docker-image
-          path: |
-            ./Dockerfile
-            # tu peux sauvegarder aussi l'image si tu veux transférer le tar
-            # docker save my-portfolio:latest -o my-portfolio.tar
+          name: dockerfile
+          path: Dockerfile
 
   deploy:
     name: Deploy Docker image on server
@@ -42,10 +37,12 @@ jobs:
     needs: build
 
     steps:
+      # 1. Checkout repository sur le runner
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Copy Dockerfile to server via SSH
+      # 2. Copier le Dockerfile sur le serveur via SSH
+      - name: Copy Dockerfile to server
         uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -56,6 +53,7 @@ jobs:
           target: "/home/${{ secrets.SERVER_USER }}/myporfolio"
           rm: true
 
+      # 3. Build et run du container directement sur le serveur
       - name: Build and run Docker container on server
         uses: appleboy/ssh-action@v0.1.8
         with:
@@ -65,7 +63,10 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           script: |
             cd /home/${{ secrets.SERVER_USER }}/myporfolio
+            # Build l'image Docker sur le serveur
             docker build -t my-portfolio:latest .
+            # Stoppe et supprime l'ancien container si existant
             docker stop my-portfolio || true
             docker rm my-portfolio || true
+            # Run le nouveau container
             docker run -d -p 80:80 --name my-portfolio my-portfolio:latest
