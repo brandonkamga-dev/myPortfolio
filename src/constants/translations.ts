@@ -11,7 +11,7 @@ export interface Translation {
     blog: string;
     contact: string;
   };
-  
+
   // Hero Section
   hero: {
     name: string;
@@ -20,7 +20,7 @@ export interface Translation {
     viewProjects: string;
     contactMe: string;
   };
-  
+
   // About Section
   about: {
     title: string;
@@ -30,7 +30,7 @@ export interface Translation {
     description3: string;
     downloadCV: string;
   };
-  
+
   // Tech Stack Section
   techStack: {
     title: string;
@@ -44,33 +44,29 @@ export interface Translation {
       toolsOthers: string;
     };
   };
-  
+
   // Projects Section
   projects: {
     title: string;
     subtitle: string;
     projectsList: {
-      aiLearningAssistant: {
+      egolya: {
         title: string;
         description: string;
       };
-      devopsDashboard: {
+      coachMyMove: {
         title: string;
         description: string;
       };
-      portfolio: {
+      lescracksWebsite: {
         title: string;
         description: string;
       };
-      automationScripts: {
+      dishTrad: {
         title: string;
         description: string;
       };
-      webAppTemplate: {
-        title: string;
-        description: string;
-      };
-      dataAnalysisTool: {
+      portfolioPersonnel: {
         title: string;
         description: string;
       };
@@ -80,7 +76,7 @@ export interface Translation {
       demo: string;
     };
   };
-  
+
   // Experience Section
   experience: {
     title: string;
@@ -123,7 +119,7 @@ export interface Translation {
       };
     };
   };
-  
+
   // Certifications Section
   certifications: {
     title: string;
@@ -131,21 +127,21 @@ export interface Translation {
     idLabel: string;
     verifyButton: string;
   };
-  
+
   // LesCracks Section
   lescracks: {
     title: string;
     description: string;
     visitButton: string;
   };
-  
+
   // Contact Section
   contact: {
     title: string;
     description: string;
     whatsapp: string;
   };
-  
+
   // Footer Section
   footer: {
     copyright: string;
@@ -166,7 +162,7 @@ export const translations: Record<'fr' | 'en', Translation> = {
       blog: "Blog",
       contact: "Contact"
     },
-    
+
     hero: {
       name: "Brandon Kamga",
       title: "Développeur Full Stack & DevOps",
@@ -174,7 +170,7 @@ export const translations: Record<'fr' | 'en', Translation> = {
       viewProjects: "Voir mes projets",
       contactMe: "Me contacter"
     },
-    
+
     about: {
       title: "À propos",
       subtitle: "Développeur passionné et entrepreneur tech",
@@ -183,7 +179,7 @@ export const translations: Record<'fr' | 'en', Translation> = {
       description3: "Curieux et orienté impact, je transforme des idées ambitieuses en solutions concrètes. Je développe mon agence tech, LesCraKs, où mon équipe et moi formons et accompagnons de jeunes talents à bâtir une carrière solide dans la tech.",
       downloadCV: "Télécharger mon CV"
     },
-    
+
     techStack: {
       title: "Stack Technique",
       subtitle: "Technologies et outils que j'utilise pour créer des solutions innovantes",
@@ -196,34 +192,30 @@ export const translations: Record<'fr' | 'en', Translation> = {
         toolsOthers: "Tools & Others"
       }
     },
-    
+
     projects: {
       title: "Projets",
       subtitle: "Quelques réalisations qui illustrent mes compétences techniques",
       projectsList: {
-        aiLearningAssistant: {
-          title: "AI Learning Assistant",
-          description: "Assistant d'apprentissage intelligent utilisant le machine learning pour personnaliser l'expérience éducative."
+        egolya: {
+          title: "Egolya",
+          description: "Extension web intelligente connectée à WhatsApp, agissant comme un assistant personnel d’apprentissage et de productivité. Elle permet d’analyser le contenu, reformuler, générer des résumés et interagir contextuellement grâce à l’IA."
         },
-        devopsDashboard: {
-          title: "DevOps Dashboard",
-          description: "Dashboard de monitoring et déploiement automatisé avec intégration CI/CD."
+        coachMyMove: {
+          title: "CoachMyMove",
+          description: "Plateforme interactive conçue pour apprendre à jouer aux échecs avec un assistant IA. Elle guide les utilisateurs pas à pas, explique les stratégies et propose des scénarios personnalisés."
         },
-        portfolio: {
+        lescracksWebsite: {
+          title: "LesCraKs Website",
+          description: "Site vitrine officiel de LesCraKs, agence EdTech dédiée à la formation, au mentorat et à l’insertion professionnelle des jeunes talents dans la tech."
+        },
+        dishTrad: {
+          title: "DishTrad",
+          description: "Plateforme dédiée à la valorisation des mets traditionnels africains, intégrant un assistant IA conversationnel pour répondre aux questions, recommander des plats et partager leur histoire culinaire."
+        },
+        portfolioPersonnel: {
           title: "Portfolio Personnel",
           description: "Portfolio moderne développé avec les dernières technologies web."
-        },
-        automationScripts: {
-          title: "Automation Scripts",
-          description: "Collection de scripts d'automatisation pour optimiser les workflows de développement."
-        },
-        webAppTemplate: {
-          title: "Web App Template",
-          description: "Template de base pour applications web modernes avec architecture scalable."
-        },
-        dataAnalysisTool: {
-          title: "Data Analysis Tool",
-          description: "Outil d'analyse de données avec visualisations interactives."
         }
       },
       buttons: {
@@ -231,12 +223,12 @@ export const translations: Record<'fr' | 'en', Translation> = {
         demo: "Demo"
       }
     },
-    
+
     experience: {
-      title: "Mon Parcours",
-      subtitle: "Formation, expériences professionnelles et leadership technique",
+      title: "Parcours",
+      subtitle: "Education, expériences professionnelles et leadership technique",
       types: {
-        education: "Formation",
+        education: "Éducation",
         leadership: "Leadership",
         teaching: "Enseignement",
         work: "Professionnel"
@@ -250,73 +242,72 @@ export const translations: Record<'fr' | 'en', Translation> = {
         gdscBackendLead: {
           title: "Backend Co-Lead",
           organization: "Google Developer Student Club",
-          location: "Université",
+          location: "Université de yaounde 1 (Presentiel)",
           description: [
             "Organisation d'ateliers backend modernes (Spring Boot)",
             "Encadrement technique de projets étudiants",
-            "Formation de 50+ développeurs juniors"
+            "Formation de 20+ développeurs juniors"
           ]
         },
         technicalInstructor: {
           title: "Technical Instructor",
           organization: "Technopole Training School",
-          location: "Yaoundé",
+          location: "Yaoundé (Presentiel & Remote)",
           description: [
             "Formateur HTML, CSS, JS, Node.js pour étudiants et pros en reconversion",
             "Développement de programmes de formation personnalisés",
-            "Taux de réussite de 95% des apprenants"
+            "Taux de réussite de 100% des apprenants"
           ]
         },
         propentaTech: {
           title: "DevOps & Full Stack Developer",
           organization: "PropentaTech Saving Solution",
-          location: "Remote",
+          location: "Yaoundé (Presentiel & Remote)",
           description: [
             "Stack Spring Boot + React",
             "CI/CD avec Jenkins, GitHub Actions, Docker",
-            "Architecture microservices scalable",
-            "Réduction des temps de déploiement de 70%"
+            "Architecture microservices scalable"
           ]
         },
         seesSoftengine: {
-          title: "DevOps & Full Stack AI Developer",
-          organization: "Sees Softengine",
-          location: "Remote",
+          title: "Full Stack AI Developer internship",
+          organization: "Seed Softengine",
+          location: "Yaoundé (Presentiel & Remote)",
           description: [
-            "Développement mobile & web avec LLMs",
+            "Développement d'extension web",
+            "Développement backend avec Node.js",
             "Responsable de la culture DevOps d'équipe",
-            "Intégration d'IA dans les workflows de développement",
-            "Lead technique sur 3 projets stratégiques"
+            "Intégration d'API d'IA générative"
           ]
         }
       }
     },
-    
+
     certifications: {
       title: "Certifications",
       subtitle: "Certifications obtenues pour valider mes compétences techniques",
       idLabel: "ID de certification:",
       verifyButton: "Vérifier"
     },
-    
+
     lescracks: {
       title: "LesCraCks",
       description: "LesCraCks est une agence EdTech que je dirige, dédiée à la diffusion de savoirs numériques et à l'accompagnement de jeunes talents dans le domaine tech. Je combine stratégie, innovation et action concrète pour créer un impact réel dans l'écosystème technologique.",
       visitButton: "Visiter LesCraCks"
     },
-    
+
     contact: {
       title: "Contact",
       description: "Intéressé par une collaboration ? N'hésitez pas à me contacter.",
       whatsapp: "WhatsApp"
     },
-    
+
     footer: {
-      copyright: "© 2024 Brandon Kamga. Tous droits réservés.",
-      madeWith: "Développé avec React, TypeScript et Tailwind CSS"
+      copyright: "© 2025 Brandon Kamga. Tous droits réservés.",
+      madeWith: "Résoudre des problèmes est un art — et c’est ma passion ❤️"
     }
   },
-  
+
   en: {
     nav: {
       home: "Home",
@@ -329,7 +320,7 @@ export const translations: Record<'fr' | 'en', Translation> = {
       blog: "Blog",
       contact: "Contact"
     },
-    
+
     hero: {
       name: "Brandon Kamga",
       title: "Full Stack Developer & DevOps",
@@ -337,7 +328,7 @@ export const translations: Record<'fr' | 'en', Translation> = {
       viewProjects: "View my projects",
       contactMe: "Contact me"
     },
-    
+
     about: {
       title: "About",
       subtitle: "Passionate developer and tech entrepreneur",
@@ -346,7 +337,7 @@ export const translations: Record<'fr' | 'en', Translation> = {
       description3: "Curious and impact-oriented, I transform ambitious ideas into concrete solutions. I develop my tech agency, LesCraKs, where my team and I train and support young talents to build a solid career in tech.",
       downloadCV: "Download my CV"
     },
-    
+
     techStack: {
       title: "Tech Stack",
       subtitle: "Technologies and tools I use to create innovative solutions",
@@ -359,34 +350,30 @@ export const translations: Record<'fr' | 'en', Translation> = {
         toolsOthers: "Tools & Others"
       }
     },
-    
+
     projects: {
       title: "Projects",
       subtitle: "Some achievements that illustrate my technical skills",
       projectsList: {
-        aiLearningAssistant: {
-          title: "AI Learning Assistant",
-          description: "Intelligent learning assistant using machine learning to personalize the educational experience."
+        egolya: {
+          title: "Egolya",
+          description: "Smart web extension connected to WhatsApp, acting as a personal learning and productivity assistant. It analyzes content, rephrases, generates summaries, and interacts contextually using AI."
         },
-        devopsDashboard: {
-          title: "DevOps Dashboard",
-          description: "Monitoring and automated deployment dashboard with CI/CD integration."
+        coachMyMove: {
+          title: "CoachMyMove",
+          description: "Interactive platform designed to learn chess with an AI assistant. It guides users step-by-step, explains strategies, and offers personalized scenarios."
         },
-        portfolio: {
+        lescracksWebsite: {
+          title: "LesCraKs Website",
+          description: "Official showcase website for LesCraKs, an EdTech agency dedicated to training, mentoring, and professional integration of young tech talents."
+        },
+        dishTrad: {
+          title: "DishTrad",
+          description: "Platform dedicated to promoting traditional African dishes, integrating a conversational AI assistant to answer questions, recommend dishes, and share their culinary history."
+        },
+        portfolioPersonnel: {
           title: "Personal Portfolio",
           description: "Modern portfolio developed with the latest web technologies."
-        },
-        automationScripts: {
-          title: "Automation Scripts",
-          description: "Collection of automation scripts to optimize development workflows."
-        },
-        webAppTemplate: {
-          title: "Web App Template",
-          description: "Base template for modern web applications with scalable architecture."
-        },
-        dataAnalysisTool: {
-          title: "Data Analysis Tool",
-          description: "Data analysis tool with interactive visualizations."
         }
       },
       buttons: {
@@ -394,7 +381,7 @@ export const translations: Record<'fr' | 'en', Translation> = {
         demo: "Demo"
       }
     },
-    
+
     experience: {
       title: "My Journey",
       subtitle: "Education, professional experiences and technical leadership",
@@ -406,77 +393,76 @@ export const translations: Record<'fr' | 'en', Translation> = {
       },
       experiences: {
         baccalaureat: {
-          title: "Baccalauréat C – Good Mention",
+          title: "Baccalaureate C – Fairly Good Mention",
           organization: "FAPO College",
           location: "Cameroon"
         },
         gdscBackendLead: {
           title: "Backend Co-Lead",
           organization: "Google Developer Student Club",
-          location: "University",
+          location: "University of Yaoundé I (On-site)",
           description: [
             "Organization of modern backend workshops (Spring Boot)",
             "Technical supervision of student projects",
-            "Training of 50+ junior developers"
+            "Training of 20+ junior developers"
           ]
         },
         technicalInstructor: {
           title: "Technical Instructor",
           organization: "Technopole Training School",
-          location: "Yaoundé",
+          location: "Yaoundé (On-site & Remote)",
           description: [
-            "HTML, CSS, JS, Node.js trainer for students and career changers",
+            "Trainer in HTML, CSS, JS, Node.js for students and professionals in career transition",
             "Development of personalized training programs",
-            "95% success rate of learners"
+            "100% success rate among learners"
           ]
         },
         propentaTech: {
           title: "DevOps & Full Stack Developer",
           organization: "PropentaTech Saving Solution",
-          location: "Remote",
+          location: "Yaoundé (On-site & Remote)",
           description: [
             "Spring Boot + React stack",
             "CI/CD with Jenkins, GitHub Actions, Docker",
-            "Scalable microservices architecture",
-            "70% reduction in deployment times"
+            "Scalable microservices architecture"
           ]
         },
         seesSoftengine: {
-          title: "DevOps & Full Stack AI Developer",
-          organization: "Sees Softengine",
-          location: "Remote",
+          title: "Full Stack AI Developer Intern",
+          organization: "Seed Softengine",
+          location: "Yaoundé (On-site & Remote)",
           description: [
-            "Mobile & web development with LLMs",
+            "Web extension development",
+            "Backend development with Node.js",
             "Responsible for team DevOps culture",
-            "AI integration in development workflows",
-            "Technical lead on 3 strategic projects"
+            "Integration of generative AI APIs"
           ]
         }
       }
     },
-    
+
     certifications: {
       title: "Certifications",
       subtitle: "Certifications obtained to validate my technical skills",
       idLabel: "Certification ID:",
       verifyButton: "Verify"
     },
-    
+
     lescracks: {
       title: "LesCraCks",
       description: "LesCraCks is an EdTech agency that I lead, dedicated to spreading digital knowledge and supporting young talents in the tech field. I combine strategy, innovation and concrete action to create real impact in the technology ecosystem.",
       visitButton: "Visit LesCraCks"
     },
-    
+
     contact: {
       title: "Contact",
       description: "Interested in a collaboration? Feel free to contact me.",
       whatsapp: "WhatsApp"
     },
-    
+
     footer: {
-      copyright: "© 2024 Brandon Kamga. All rights reserved.",
-      madeWith: "Built with React, TypeScript and Tailwind CSS"
+      copyright: "© 2025 Brandon Kamga. All rights reserved.",
+      madeWith: "Solving problem is an art and is my passion ❤️"
     }
   }
 };

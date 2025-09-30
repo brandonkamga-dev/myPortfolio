@@ -8,52 +8,44 @@ const Projects = () => {
   const { t } = useTranslation();
   const projects = [
     {
-      title: t.projects.projectsList.aiLearningAssistant.title,
-      description: t.projects.projectsList.aiLearningAssistant.description,
-      stack: ["Python", "FastAPI", "Scikit-learn", "React"],
+      title: t.projects.projectsList.egolya.title,
+      description: t.projects.projectsList.egolya.description,
+      stack: ["Node.js", "Express", "LangChain", "Gemini AI", "Docker"],
       github: "#",
       demo: null,
       year: "2024"
     },
     {
-      title: t.projects.projectsList.devopsDashboard.title,
-      description: t.projects.projectsList.devopsDashboard.description,
-      stack: ["React", "Node.js", "Docker", "GitHub Actions"],
+      title: t.projects.projectsList.coachMyMove.title,
+      description: t.projects.projectsList.coachMyMove.description,
+      stack: ["React", "Tailwind CSS", "Node.js", "Express", "LangChain", "ChromaDB", "Gemini AI API", "Docker"],
       github: "#",
       demo: null,
       year: "2024"
     },
     {
-      title: t.projects.projectsList.portfolio.title,
-      description: t.projects.projectsList.portfolio.description,
-      stack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      title: t.projects.projectsList.lescracksWebsite.title,
+      description: t.projects.projectsList.lescracksWebsite.description,
+      stack: ["React", "Tailwind CSS"],
       github: "#",
       demo: "#",
       year: "2024"
     },
     {
-      title: t.projects.projectsList.automationScripts.title,
-      description: t.projects.projectsList.automationScripts.description,
-      stack: ["Python", "Bash", "Docker", "Git"],
+      title: t.projects.projectsList.dishTrad.title,
+      description: t.projects.projectsList.dishTrad.description,
+      stack: ["React", "Tailwind CSS", "Node.js", "FastAPI", "RabbitMQ", "LangChain", "ChromaDB", "TensorFlow", "PostgreSQL", "Docker"],
       github: "#",
       demo: null,
-      year: "2023"
+      year: "2024"
     },
     {
-      title: t.projects.projectsList.webAppTemplate.title,
-      description: t.projects.projectsList.webAppTemplate.description,
-      stack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+      title: t.projects.projectsList.portfolioPersonnel.title,
+      description: t.projects.projectsList.portfolioPersonnel.description,
+      stack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
       github: "#",
-      demo: null,
-      year: "2023"
-    },
-    {
-      title: t.projects.projectsList.dataAnalysisTool.title,
-      description: t.projects.projectsList.dataAnalysisTool.description,
-      stack: ["Python", "Pandas", "Jupyter", "Matplotlib"],
-      github: "#",
-      demo: null,
-      year: "2023"
+      demo: "#",
+      year: "2024"
     }
   ];
 
