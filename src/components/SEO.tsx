@@ -14,7 +14,7 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
   title = "Brandon Kamga - Développeur Full Stack & DevOps Engineer",
-  description = "Portfolio de Brandon Kamga, développeur full stack spécialisé en React, TypeScript, Python, DevOps et Machine Learning. Découvrez mes projets et articles techniques.",
+  description = "Portfolio de Brandon Kamga, Découvrez mes projets et articles.",
   keywords = "Brandon Kamga, développeur, full stack, React, TypeScript, Python, DevOps, Machine Learning, portfolio, développeur web, ingénieur logiciel",
   image = "/moi.png",
   url = "https://brandonkamga.dev",
@@ -46,9 +46,11 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={fullImageUrl} />
-      <meta property="og:image:alt" content="Photo de Brandon Kamga, développeur full stack" />
+      <meta property="og:image:secure_url" content={fullImageUrl} />
+      <meta property="og:image:alt" content="Portfolio de Brandon Kamga - Développeur Full Stack & DevOps Engineer" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/png" />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:site_name" content="Brandon Kamga Portfolio" />
       <meta property="og:locale" content="fr_FR" />
