@@ -11,7 +11,7 @@ const Projects = () => {
       title: t.projects.projectsList.egolya.title,
       description: t.projects.projectsList.egolya.description,
       stack: ["Node.js", "Express", "LangChain", "Gemini AI", "Docker"],
-      github: "#",
+      github: null,
       demo: null,
       year: "2024"
     },
@@ -19,7 +19,7 @@ const Projects = () => {
       title: t.projects.projectsList.coachMyMove.title,
       description: t.projects.projectsList.coachMyMove.description,
       stack: ["React", "Tailwind CSS", "Node.js", "Express", "LangChain", "ChromaDB", "Gemini AI API", "Docker"],
-      github: "#",
+      github: null,
       demo: null,
       year: "2024"
     },
@@ -27,15 +27,15 @@ const Projects = () => {
       title: t.projects.projectsList.lescracksWebsite.title,
       description: t.projects.projectsList.lescracksWebsite.description,
       stack: ["React", "Tailwind CSS"],
-      github: "#",
-      demo: "#",
+      github: null,
+      demo: null,
       year: "2024"
     },
     {
       title: t.projects.projectsList.dishTrad.title,
       description: t.projects.projectsList.dishTrad.description,
       stack: ["React", "Tailwind CSS", "Node.js", "FastAPI", "RabbitMQ", "LangChain", "ChromaDB", "TensorFlow", "PostgreSQL", "Docker"],
-      github: "#",
+      github: null,
       demo: null,
       year: "2024"
     },
@@ -43,8 +43,8 @@ const Projects = () => {
       title: t.projects.projectsList.portfolioPersonnel.title,
       description: t.projects.projectsList.portfolioPersonnel.description,
       stack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      github: "#",
-      demo: "#",
+      github: null,
+      demo: "https://brandonkamga.griote.org/blog",
       year: "2024"
     }
   ];
@@ -101,16 +101,22 @@ const Projects = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-                <a
-                  href={project.github}
-                  className="flex items-center justify-center sm:justify-start gap-2 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors rounded-lg"
-                >
-                  <Github size={16} />
-                  {t.projects.buttons.code}
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center sm:justify-start gap-2 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors rounded-lg"
+                  >
+                    <Github size={16} />
+                    {t.projects.buttons.code}
+                  </a>
+                )}
                 {project.demo && (
                   <a
                     href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center justify-center sm:justify-start gap-2 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors rounded-lg"
                   >
                     <ExternalLink size={16} />

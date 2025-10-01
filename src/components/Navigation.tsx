@@ -2,6 +2,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Menu, X, Sun, Moon, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 import useTranslation from "../hooks/useTranslation";
@@ -11,17 +12,19 @@ const Navigation = () => {
   const [isDark, setIsDark] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { language, changeLanguage, t } = useTranslation();
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
-  const navItems = [
-    { label: t.nav.home, href: "#home" },
-    { label: t.nav.about, href: "#about" },
-    { label: t.nav.experience, href: "#experience" },
-    { label: t.nav.technologies, href: "#tech-stack" },
-    { label: t.nav.projects, href: "#projects" },
-    { label: t.nav.certifications, href: "#certifications" },
-    { label: t.nav.lescracks, href: "#lescracks" },
+    const navItems = [
+    { label: t.nav.home, href: isHomePage ? "#home" : "/#home" },
+    { label: t.nav.about, href: isHomePage ? "#about" : "/#about" },
+    { label: t.nav.experience, href: isHomePage ? "#experience" : "/#experience" },
+    { label: t.nav.technologies, href: isHomePage ? "#tech-stack" : "/#tech-stack" },
+    { label: t.nav.projects, href: isHomePage ? "#projects" : "/#projects" },
+    { label: t.nav.certifications, href: isHomePage ? "#certifications" : "/#certifications" },
+    { label: t.nav.lescracks, href: isHomePage ? "#lescracks" : "/#lescracks" },
     { label: t.nav.blog, href: "/blog" },
-    { label: t.nav.contact, href: "#contact" }
+    { label: t.nav.contact, href: isHomePage ? "#contact" : "/#contact" }
   ];
 
   const toggleTheme = () => {

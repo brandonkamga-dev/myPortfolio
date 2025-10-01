@@ -1,6 +1,7 @@
 
 "use client";
 
+import SEO from "../components/SEO";
 import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 import About from "../components/About";
@@ -14,7 +15,14 @@ import Footer from "../components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <>
+      <SEO 
+        title="Brandon Kamga - Développeur Full Stack & DevOps Engineer"
+        description="Portfolio de Brandon Kamga, développeur full stack passionné par React, TypeScript, Python et DevOps. Découvrez mes projets innovants et articles techniques sur le développement web moderne."
+        keywords="Brandon Kamga, Kamga Brandon, développeur full stack, React developer, TypeScript, Python, DevOps engineer, portfolio développeur, développeur web, ingénieur logiciel, machine learning, CI/CD, GitHub Actions, FastAPI"
+        url="/"
+      />
+      <div className="min-h-screen bg-white dark:bg-gray-900">
       <Navigation />
       <div className="pt-6">
         <section id="home">
@@ -44,6 +52,7 @@ const Index = () => {
         <Footer />
       </div>
     </div>
+    </>
   );
 };
 
